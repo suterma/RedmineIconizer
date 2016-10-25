@@ -16,6 +16,7 @@
 // Changelog
 // 0.101 URL Matching
 // 0.102 Using basic icons
+// 0.103 Removed basic icons, should use styles from css file
 // ---------------------------------------
 (function () {
   'use strict';
@@ -30,7 +31,7 @@
   
   //Add icons for the new classified elements
   //Unspecified icon for unknown tracker types
-  $('.tracker.tracker-icon').css('background-image', 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAALJJREFUOI3V0iGLQlEQhuEHg9EVNnmTaYubZaPJYPJnCdq2b9nuzzCuXRYxiBgFQRERLeOme7xeN/nBcGBm3u/McA75esUIMxwjfvGJLMH8qYEFzolYo3nL4Csap/hANaKNSdS+bxnMo6mVU3uL2rJojXoin4XB6pqoJBo3iXwvzp+iCfLUwTYm6JaF+zgEPCwLv2Mf8KAsDOP/wBXscELtEYOXuD31Kk+guoIVUj/xbl0AzKIqmHPanHEAAAAASUVORK5CYII=")');
+  //$('.tracker.tracker-icon').css('background-image', 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAALJJREFUOI3V0iGLQlEQhuEHg9EVNnmTaYubZaPJYPJnCdq2b9nuzzCuXRYxiBgFQRERLeOme7xeN/nBcGBm3u/McA75esUIMxwjfvGJLMH8qYEFzolYo3nL4Csap/hANaKNSdS+bxnMo6mVU3uL2rJojXoin4XB6pqoJBo3iXwvzp+iCfLUwTYm6JaF+zgEPCwLv2Mf8KAsDOP/wBXscELtEYOXuD31Kk+guoIVUj/xbl0AzKIqmHPanHEAAAAASUVORK5CYII=")');
   
   //Specific icons for known tracker types
   //$('.tracker.tracker-defect.tracker-icon').css('background-image', 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAQJJREFUOI2V0r0uRFEUBeDvmolMQVRKDyBRa7wBjegURKJUSrQaz6TQCQ0JYUIyQxQSSomfApkZo5hzOTnOTa6d7GL/rLXX2fvw1wrs4gkv2Au52raNYeI7/yF4zBA81AU38JUh6EU9Y8F/gjY6WA3NBxni/UC+ji4u4uJRNOkadxkF97iJ4sOYoMAKzjPA1E+xrOIqGzUIttBKCboVzQuYr6i1S3ATg5wcnKAf6o0o/4nnHOA9mdIM+X6U66Wg8qZrFSpSG2AzUeRS/p05BaV3MFkqmMGt0YbfIuJhMv01TL/CNMbLQsvv11zCB84i4LHRfhZDXMTgnM1hKoonMFvV/A0k+WtBkWph2wAAAABJRU5ErkJggg==)');
@@ -38,7 +39,7 @@
   //TODO does not work $('.tracker.tracker-defect.tracker-icon').css('background-image', 'url(https://raw.githubusercontent.com/iconic/open-iconic/master/svg/bug.svg)');
 
   //Add basic styles for the icons
-  $('.tracker-icon').css('background-repeat', 'no-repeat');
-  $('.tracker-icon').css('padding-left', '20px');
-  $('.tracker-icon').css('background-size', '16px'); 
+  //$('.tracker-icon').css('background-repeat', 'no-repeat');
+  //$('.tracker-icon').css('padding-left', '20px');
+  //$('.tracker-icon').css('background-size', '16px'); 
 }) ();
