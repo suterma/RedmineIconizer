@@ -1,11 +1,9 @@
-@namespace url(http://www.w3.org/1999/xhtml);
+/* A basic CSS for adding icons to Redmin sites, that have been iconized using the RedmineIconizer user script */
 
-@-moz-document domain("redmine.org") {
-  .tracker-icon{
-    background-color: rebeccapurple;
-    /*background-image: url("https://raw.githubusercontent.com/iconic/open-iconic/master/svg/account-login.svg");*/
-    background-size: 16px;
-    background-repeat: no-repeat;
-    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/account-login-2x.png");
-  }
+.tracker-icon{
+  background-color: rebeccapurple;
+  /*background-image: url("https://raw.githubusercontent.com/iconic/open-iconic/master/svg/account-login.svg");*/
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/account-login-2x.png");
 }
