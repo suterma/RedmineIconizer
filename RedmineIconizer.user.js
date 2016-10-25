@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         RedmineIconizer
 // @namespace    https://github.com/suterma/
-// @version      0.105
+// @version      0.101
 // @description  Adds icons to Redmine identifier HTML elements, and additionally applies CSS classes to the identifier elements.
 // @copyright    marcel@codeministry.ch, GPLv3 License
 // @author       marcel@codeministry.ch
-// TODO change the include value to your needs. The give value requires a redmine subdomain.
-// @include      https://*redmine*
+// TODO change the include value to your needs. The given example requires simply a redmine subdomain.
+// @include      /^https?:\/\/(\S+\.)*redmine\.\S+$/
 // @grant        none
 // @downloadURL  https://github.com/suterma/RedmineIconizer/raw/master/RedmineIconizer.user.js
 // @updateURL    https://github.com/suterma/RedmineIconizer/raw/master/RedmineIconizer.user.js
@@ -14,6 +14,7 @@
 
 // ---------------------------------------
 // Changelog
+// 0.101 URL Matching
 // ---------------------------------------
 
 (function() {
