@@ -42,7 +42,9 @@
   $('td.status:contains(in Arbeit)').addClass('icon status-progress');
   $('td.status:contains(neu)').addClass('icon status-new');
   $('td.status:contains(gelöst / umgesetzt)').addClass('icon status-resolved');
+  $('td.status:contains(zurückgewiesen / abgebrochen)').addClass('icon status-rejected');
   $('td.status:contains(abgeschlossen)').addClass('icon status-closed');
+  
 
   //Status table data items (in English)
   $('td.status:contains(New)').addClass('icon status-new');
