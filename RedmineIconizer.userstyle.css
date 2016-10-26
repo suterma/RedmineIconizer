@@ -1,4 +1,8 @@
-/* A basic CSS for adding icons to Redmine sites, that have been iconized using the RedmineIconizer user script */
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("redmine.nowhow.ch") {
+  
+  /* A basic CSS for adding icons to Redmine sites, that have been iconized using the RedmineIconizer user script */
 
 .tracker-icon.tracker-patch {
   background-image: url("https://github.com/iconic/open-iconic/raw/master/png/medical-cross-2x.png");
@@ -13,9 +17,20 @@
 }
 
   
-  
+/* Icon-Styles to have them appear nicely in the table */
 .tracker-icon{
   background-size: 16px auto;
   background-repeat: no-repeat;
-  padding-left: 20px
+  background-position-y: 2px;
+  /*padding-left: 20px;*/
+}
+  
+  /* Minimize the used space to the icon space useage */
+  th,
+  th a,
+  td.tracker {
+    max-width: 10px;
+    /* TODO TEST
+    font-size: 1px; */
+  }
 }
