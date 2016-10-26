@@ -1,36 +1,76 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-@-moz-document domain("redmine*") {
+/* TODO change the include value to your needs. The given example requires simply a redmine subdomain. */
+@-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {
   
   /* A basic CSS for adding icons to Redmine sites, that have been iconized using the RedmineIconizer user script */
 
-.tracker-icon.tracker-patch {
+  
+/********************************************
+ * Tracker icons
+ ********************************************
+ */
+table.issues .icon.tracker-patch {
   background-image: url("https://github.com/iconic/open-iconic/raw/master/png/medical-cross-2x.png");
 }
 
-.tracker-icon.tracker-defect {
+table.issues .icon.tracker-defect {
   background-image: url("https://github.com/iconic/open-iconic/raw/master/png/bug-2x.png");
 }
 
-.tracker-icon.tracker-feature {
-  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/puzzle-piece-2x.png");
+table.issues .icon.tracker-feature {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/beaker-2x.png");
 }
-
+  
+table.issues .icon.tracker-task {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/task-2x.png");
+}  
+  
+/********************************************
+ * Status icons
+ ********************************************
+ */  
+table.issues .icon.status-new {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/sun-2x.png");
+}
+  
+table.issues .icon.status-needsfeedback {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/bullhorn-2x.png");
+}
+  
+table.issues .icon.status-resolved {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/circle-check-2x.png");
+}  
+  
+table.issues .icon.status-progress {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/loop-circular-2x.png");
+}    
+  
+table.issues .icon.status-reopened {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/envelope-open-2x.png");
+}    
+  
+table.issues .icon.status-closed {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/box-2x.png");
+}      
+  
+table.issues .icon.status-rejected {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/thumb-down-2x.png");
+}    
   
 /* Icon-Styles to have them appear nicely in the table */
-.tracker-icon{
+table.issues .icon{
   background-size: 16px auto;
   background-repeat: no-repeat;
   background-position-y: 2px;
+  background-position-x: 50%;
   /*padding-left: 20px;*/
 }
   
   /* Minimize the used space to the icon space useage */
-  th,
-  th a,
-  td.tracker {
-    max-width: 10px;
-    /* TODO TEST
-    font-size: 1px; */
+  td.tracker,
+  td.status {
+    /*max-width: 10px;*/
+    font-size: 0; 
   }
 }
