@@ -21,17 +21,37 @@
 (function () {
   'use strict';
   
+  // ---------------------------------------
   //Set classes according to existing element class and content
+  // ---------------------------------------
+  
   //Tracker table header items
   $('th a:contains(Tracker)').parent().addClass('tracker');
   
   //Tracker table data items
-  $('td.tracker:contains(Defect)').addClass('tracker-icon tracker-defect');
-  $('td.tracker:contains(Bug)').addClass('tracker-icon tracker-defect');
-  $('td.tracker:contains(Feature)').addClass('tracker-icon tracker-feature');
-  $('td.tracker:contains(Patch)').addClass('tracker-icon tracker-patch');
-  $('td.tracker:contains(Task)').addClass('tracker-icon tracker-task');
+  $('td.tracker:contains(Defect)').addClass('icon tracker-defect');
+  $('td.tracker:contains(Bug)').addClass('icon tracker-defect');
+  $('td.tracker:contains(Feature)').addClass('icon tracker-feature');
+  $('td.tracker:contains(Patch)').addClass('icon tracker-patch');
+  $('td.tracker:contains(Task)').addClass('icon tracker-task');
   
+  //Status table header items
+  $('th a:contains(Status)').parent().addClass('status');
+  
+  //Status table data items (in German)
+  $('td.status:contains(in Arbeit)').addClass('icon status-progress');
+  $('td.status:contains(neu)').addClass('icon status-new');
+  $('td.status:contains(gelöst / umgesetzt)').addClass('icon status-resolved');
+  $('td.status:contains(abgeschlossen)').addClass('icon status-closed');
+
+  //Status table data items (in English)
+  $('td.status:contains(New)').addClass('icon status-new');
+  $('td.status:contains(Needs feedback)').addClass('icon status-needsfeedback');
+  $('td.status:contains(Confirmed)').addClass('icon status-confirmed');
+  $('td.status:contains(Resolved)').addClass('icon status-resolved');
+  $('td.status:contains(Closed)').addClass('icon status-closed');
+  $('td.status:contains(Reopened)').addClass('icon status-reopened');
+
   //Add styles to actually show icons according to the set CSS classes
   //TODO does not work $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', 'https://raw.githubusercontent.com/suterma/RedmineIconizer/master/RedmineIconizer.userstyle.css') );
 }) ();
