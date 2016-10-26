@@ -1,6 +1,6 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-@-moz-document domain("redmine.nowhow.ch") {
+@-moz-document domain("redmine*") {
   
   /* A basic CSS for adding icons to Redmine sites, that have been iconized using the RedmineIconizer user script */
 
