@@ -3,8 +3,39 @@
 /* TODO change the include value to your needs. The given example requires simply a redmine subdomain. */
 @-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {
   
-  /* A basic CSS for adding icons to Redmine sites, that have been iconized using the RedmineIconizer user script */
-
+  /* Basic CSS for adding icons to the redmin issues page, that have been iconized using the RedmineIconizer user script */
+  
+/********************************************
+ * General issues table icon styles
+ ********************************************
+ */
+  
+/* filter the black icons to match the font color */
+table.issues .icon {
+  -webkit-filter: opacity(71%);
+-moz-filter: opacity(71%);
+-o-filter: opacity(71%);
+-ms-filter: opacity(71%);
+filter: opacity(71%);  
+  }  
+  
+/* Have them appear nicely in the table */
+table.issues .icon {
+  background-size: 16px auto;
+  background-repeat: no-repeat;
+  background-position-y: 2px;
+  background-position-x: 50%;
+  /*padding-left: 20px;*/
+}
+  
+  /* Minimize the used space to the icon space useage */
+table.issues td.tracker,
+table.issues td.status,
+table.issues td.priority {
+    /*max-width: 10px;*/
+    font-size: 0; 
+  }
+}
   
 /********************************************
  * Tracker icons
@@ -58,19 +89,73 @@ table.issues .icon.status-rejected {
   background-image: url("https://github.com/iconic/open-iconic/raw/master/png/thumb-down-2x.png");
 }    
   
-/* Icon-Styles to have them appear nicely in the table */
-table.issues .icon{
-  background-size: 16px auto;
+/********************************************
+ * Priority icons (Priority is represented with 1 to 5 icons)
+ * We use smaller icons, to keep the representation somewhat less spacey 
+ ********************************************
+ */  
+/* Allow space for 5 smaller icons */
+  table.issues td.priority.icon {
+    min-width: 32px;
+  }  
+  /* Keep the prority icons smaller than other, because there may be up to 5 */
+  table.issues td.priority.icon  {
+  background-size: 8px auto;
   background-repeat: no-repeat;
-  background-position-y: 2px;
-  background-position-x: 50%;
-  /*padding-left: 20px;*/
+  background-position-y: 5px;
+  }
+  
+table.issues .icon.priority-low {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png");
+  background-repeat: no-repeat;
+  background-position: 16px ;
 }
   
-  /* Minimize the used space to the icon space useage */
-  td.tracker,
-  td.status {
-    /*max-width: 10px;*/
-    font-size: 0; 
+table.issues .icon.priority-normal {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png");
+    
+  background-repeat: no-repeat;
+  background-position: 12px ,
+                       20px ;
   }
-}
+  
+table.issues .icon.priority-high {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png");
+    
+  background-repeat: no-repeat;
+  background-position: 8px ,
+                       16px ,
+                       24px ;
+  }  
+  
+table.issues .icon.priority-urgent {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png");
+    
+  background-repeat: no-repeat;
+  background-position: 4px ,
+                       12px ,
+                       20px ,
+                       28px ;
+  }    
+  
+table.issues .icon.priority-immediate {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/media-record.png");
+    
+  background-repeat: no-repeat;
+  background-position: 0px ,
+                       8px ,
+                       16px ,
+                       24px ,
+                       32px ;
+}    
+
