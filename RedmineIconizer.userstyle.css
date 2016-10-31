@@ -3,15 +3,98 @@
 /* TODO change the include value to your needs. The given example requires simply a redmine subdomain. */
 @-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {
   
-  /* Basic CSS for adding icons to the redmin issues page, that have been iconized using the RedmineIconizer user script */
+  /* This CSS does the following:
+   * - Generally replace existing icons with the ones from the free 
+   *   iconic icon set at https://useiconic.com/open, provided by Waybury at waybury.com
+   * - Provide basic CSS for specifying the icons for the redmine issues 
+       page, that have been iconized using the RedmineIconizer user script
+   */
+
+ /********************************************
+ * Replace existing background icons by the ones from the iconic set
+ ********************************************
+ */
+.icon-checked {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/check-2x.png");
+}  
+.icon-reload {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/reload-2x.png");
+}    
+.icon-edit {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/pencil-2x.png");
+}      
+.icon-del {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/trash-2x.png");
+}      
+.icon-orange-tree {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/align-right-2x.png");
+}  
+.icon-fav-off {
+    /*background-image: url("https://github.com/iconic/open-iconic/raw/master/png/star-2x.png");*/
+}  
+.icon-fav {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/star-2x.png");
+}  
+.icon-copy {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/clipboard-2x.png");
+}  
+.icon-comment {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/comment-square-2x.png");
+}  
+  
+ /********************************************
+ * Replace existing action link image icons by the ones from the iconic set
+ ********************************************
+ */  
+  
+  a>img{
+  width:16px;
+  height:16px;
+  box-sizing:border-box;
+  padding-left: 16px;
+    
+  }
+  a>img[src="/images/edit.png"]{
+    background: url(https://github.com/iconic/open-iconic/raw/master/png/pencil-2x.png) left top no-repeat;
+  }  
+  a>img[src="/images/comment.png"]{
+    background: url(https://github.com/iconic/open-iconic/raw/master/png/comment-square-2x.png) left top no-repeat;
+  }  
+    
+  
+/* Visually keep icons and action links linked, by showing them as a button */
+a.icon {
+  line-height: 2em;
+  background-position-x: 4px;
+    border-radius: 4px;
+  border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px;
+  padding-left: 24px;
+    /*position: relative;*/
+    /*vertical-align: middle;*/
+    /*white-space: nowrap;*/
+}  
+  
+  
+a.icon:hover, a.icon:active {
+    color: inherit;
+    text-decoration: inherit;
+  background-color: #eee;
+}
+  
+  
+    
   
 /********************************************
- * General issues table icon styles
+ * General icon styles
  ********************************************
  */
   
 /* filter the black icons to match the font color */
-table.issues .icon {
+  a>img,
+.icon {
   -webkit-filter: opacity(71%);
 -moz-filter: opacity(71%);
 -o-filter: opacity(71%);
@@ -19,7 +102,7 @@ table.issues .icon {
 filter: opacity(71%);  
   }  
   
-/* Have them appear nicely in the table */
+/* Have table icons appear nicely in the table */
 table.issues .icon {
   background-size: 16px auto;
   background-repeat: no-repeat;
@@ -28,12 +111,26 @@ table.issues .icon {
   /*padding-left: 20px;*/
 }
   
-  /* Minimize the used space to the icon space useage */
-table.issues td.tracker,
-table.issues td.status,
-table.issues td.priority {
-    /*max-width: 10px;*/
+  /* Remove the unnecessary type text in the column items */
+  table.issues td.icon {
     font-size: 0; 
+}
+
+  /* Minimize, but adapt the used space to the icon space useage */
+    table.issues td.icon,
+table.issues th.tracker,
+table.issues th.status,
+table.issues th.priority {
+    /*max-width: 10px;*/
+    /*font-size: 0; */
+  padding-left: 2px;
+  padding-right: 2px;  
+  width: 16px;
+  }
+  
+  /* Compensate the minimization of th space usage with closer sort icon */
+  table.issues a.sort  {
+    padding-right: 10px;
   }
 }
   
