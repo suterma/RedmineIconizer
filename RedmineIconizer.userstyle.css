@@ -3,6 +3,10 @@
 /* TODO change the include value to your needs. The given example requires simply a redmine subdomain. */
 @-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {
   
+  /*Version:
+  1.1.0 SVG Testcode introduced. Coloring does not work.
+  */
+  
   /* This CSS does the following:
    * - Generally replace existing icons with the ones from the free 
    *   iconic icon set at https://useiconic.com/open, provided by Waybury at waybury.com
@@ -95,11 +99,12 @@ a.icon:hover, a.icon:active {
 /* filter the black icons to match the font color */
   a>img,
 .icon {
+  /*
   -webkit-filter: opacity(71%);
 -moz-filter: opacity(71%);
 -o-filter: opacity(71%);
 -ms-filter: opacity(71%);
-filter: opacity(71%);  
+filter: opacity(71%);  */
   }  
   
 /* Have table icons appear nicely in the table */
@@ -139,7 +144,9 @@ table.issues th.priority {
  ********************************************
  */
 table.issues .icon.tracker-patch {
-  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/medical-cross-2x.png");
+  /*background-image: url("https://github.com/iconic/open-iconic/raw/master/png/medical-cross-2x.png");*/
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">  <path  class="kiwi" d="M2 0v2h-2v4h2v2h4v-2h2v-4h-2v-2h-4z" /></svg>');
 }
 
 table.issues .icon.tracker-defect {
@@ -153,6 +160,14 @@ table.issues .icon.tracker-feature {
 table.issues .icon.tracker-task {
   background-image: url("https://github.com/iconic/open-iconic/raw/master/png/task-2x.png");
 }  
+
+/*TODO TEST Icon colorizer*/
+.icon.kiwi {
+  fill: red; 
+  background-color: red;
+  /*  -webkit-mask-image: url(icon.svg);*/
+    /*mask-image: url(icon.svg);*/
+}
   
 /********************************************
  * Status icons
