@@ -188,6 +188,73 @@ table.issues .icon.priority-immediate {
 .icon-comment {
     background-image: url("https://github.com/iconic/open-iconic/raw/master/png/comment-square-2x.png");
 }  
+.icon-history {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/media-skip-backward-2x.png");
+}  
+.icon-add {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/plus-2x.png");
+}
+.icon-lock {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/lock-locked-2x.png");
+}  
+.icon-stats {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/bar-chart-2x.png");
+}  
+.open .icon-folder,  
+.icon-folder {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/folder-2x.png");
+}    
+tr span.expander {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/caret-right.png");
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+}
+
+tr.open span.expander {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/caret-top.png");
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+  }
+  
+/* Page Activity */
+div#activity dt, #search-results dt {
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+div#activity dt.issue-edit {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/inbox-2x.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/pencil-2x.png");    
+  background-position: 0px ,
+                       20px ;
+}
+div#activity dt.issue {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/inbox-2x.png");    
+  background-position: 0px;
+}  
+div#activity dt.issue-note {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/inbox-2x.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/comment-square-2x.png");    
+  background-position: 0px ,
+                       20px ;
+}    
+div#activity dt.issue-closed,
+div#activity dt.issue.closed.grouped {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/inbox-2x.png"),
+                    url("https://github.com/iconic/open-iconic/raw/master/png/check-2x.png");    
+  background-position: 0px ,
+                       20px ;
+}    
+div#activity dt.changeset {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/cog-2x.png");    
+  background-position: 0px;
+}    
+  
+  
+/* Page Roadmap */  
+div#roadmap h3.version {
+  background-image: url("https://github.com/iconic/open-iconic/raw/master/png/target-2x.png");    
+}  
+  
  /********************************************
  * Replace existing header/layouted text icons by the ones from the iconic set
  ********************************************
@@ -206,6 +273,13 @@ div.news h3 {
 div.wiki .external {
     background-image: url("https://github.com/iconic/open-iconic/raw/master/png/external-link.png");
 }
+  table.boards a.board, h3.comments {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/comment-square.png");
+    margin-left: 4px;
+  }
+ span.search_for_watchers a, span.add_attachment a {
+    background-image: url("https://github.com/iconic/open-iconic/raw/master/png/plus.png");
+  }
   
  /********************************************
  * Replace existing action link image icons by the ones from the iconic set
@@ -297,3 +371,4 @@ table.issues th.priority {
     padding-right: 10px;
   }
 }
+  
