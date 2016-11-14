@@ -1,7 +1,8 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 /* TODO change the include value to your needs. The given example requires simply a redmine subdomain. */
-@-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {
+@-moz-document regexp("(?=.*?redmine).*") {
+/*@-moz-document regexp("https?://(\\S+\\.)*redmine\\.\\S+") {*/
   
   /*Version:
   1.1.0 SVG Testcode introduced. Coloring does not work.
