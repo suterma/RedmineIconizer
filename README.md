@@ -7,7 +7,7 @@ This works on default installations in English and German, for well-known values
 1. Install a suitable user script processor for your browser first. 
 
    For Firefox you can use [Greasemonkey](https://www.greasespot.net/), for Chrome you can use [Tampermonkey](https://tampermonkey.net/).
-1. Navigatate to the [raw link for RedmineIconizer.user.js](https://github.com/suterma/RedmineIconizer/raw/master/RedmineIconizer.user.js) and load it.
+1. Navigate to the [raw link for RedmineIconizer.user.js](https://github.com/suterma/RedmineIconizer/raw/master/RedmineIconizer.user.js) and load it.
 1. Accept the installation.
 1. Now, add the CSS to the page
    * Either by changing your Redmine installation and including the CSS provided here
