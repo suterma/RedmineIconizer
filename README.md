@@ -1,4 +1,9 @@
 # RedmineIconizer
+![License](https://img.shields.io/github/license/suterma/RedmineIconizer.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/suterma/RedmineIconizer/total.svg)
+![Release](https://img.shields.io/github/release/suterma/RedmineIconizer.svg)
+![Language](https://img.shields.io/github/languages/top/suterma/RedmineIconizer.svg)
+
 A [Greasemonkey](https://www.greasespot.net/) / [Tampermonkey](https://tampermonkey.net/) user script, that adds CSS classes for icons to items on a Redmine issues list. These items usually only have a textual identifier on some columns. With this script, the columns "Tracker", "Status" and "Priority" get icon CSS classes according to their values.
 
 This works on default installations in English and German, for well-known values. To actually display the icons, you will need appropriate CSS styles. These are provided here too, but they require separate installation.
